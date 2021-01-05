@@ -53,12 +53,3 @@ with open(args.filename, 'wb') as f:
 			print('.', end='', flush=True)
 print('')
 print('Done', args.filename)
-
-'''
-with open(args.filename, 'wb') as f:
-	for segment in m3u8_obj.segments:
-		print('Segment', segment.uri)
-		seg_response = requests.get(('' if segment.uri[:4]=='http' else base_uri)  + segment.uri, verify=False)
-		f.write(seg_response.content)
-'''
-
